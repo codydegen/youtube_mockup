@@ -1,0 +1,152 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: Roboto, Arial, sans-serif;
+  vertical-align: baseline;
+  font-weight: 100;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1.8;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* end reset */
+
+html {
+  border-style: solid;
+  background: #f9f9f9;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  top: 0;
+  justify-content: space-between;
+  border-width: 2px;
+  border-style: solid;
+  background: #fff;
+}
+
+#content-container {
+  display: flex;
+  padding-top: 80px;
+  width: auto;
+  flex-direction: row-reverse;
+}
+
+iframe {
+  float: left;
+  position: relative;
+}
+.suggested-videos-container {
+  /* float: right; */
+  order: -1;
+  width: 400px;
+}
+.suggested-videos {
+  border-width: 2px;
+  border-style: solid;
+  height: 94px;
+  margin-bottom: 10px;
+}
+
+img {
+  float: left;
+  width: 168px;
+  height: 94px;
+}
+
+.suggested-videos-title {
+  color: rgb(13,13,13);
+  font-size: 1.4em;
+  font-weight: 700;
+
+}
+
+.suggested-videos-author,
+.suggested-videos-views {
+  color: rgb(13,13,13);
+  font-size: 1.3em;
+}
+
+.video-comments {
+  order: 2;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+#title-information {
+  border-bottom: thin solid rgb(202, 202, 202);
+  border-width: 1px;
+}
+
+.bottom-bar-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+#video-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#author-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+#author-info {
+  flex-grow: 2;
+}
+#subscribe {
+  width: 113.5px;
+}
