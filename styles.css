@@ -23,6 +23,7 @@ time, mark, audio, video {
   font-family: Roboto, Arial, sans-serif;
   vertical-align: baseline;
   font-weight: 100;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -47,6 +48,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+button, input {
+  box-sizing: border-box;
+  background: #fff;
+}
 /* end reset */
 
 html {
@@ -60,10 +65,69 @@ header {
   width: 100%;
   height: 65px;
   top: 0;
+  padding: 0 16px;
   justify-content: space-between;
-  border-width: 2px;
-  border-style: solid;
+  align-items: center;
+  /* border-width: 2px;
+  border-style: solid; */
   background: #fff;
+}
+
+img {
+  float: left;
+  width: 168px;
+  height: 94px;
+}
+
+#search-container {
+  display: flex;
+  align-items: center;
+}
+
+#YT-logo {
+  width: 80px;
+  height: 18px;
+
+}
+
+#guide-icon, #search-icon {
+  width: 24px;
+  height: 24px;
+
+}
+
+#search-bar {
+  height: 32px;
+}
+
+#search-bar {
+  height: 32px;
+  width: 240px;
+}
+
+.header-btn-images {
+  height: 24px;
+  width: 24px;
+}
+
+#sign-in-button {
+  border: thin solid rgb(6,95,212);
+  width: 105.3px;
+  padding: 5px 11px;
+  display: flex;
+  align-items: center;
+}
+
+#sign-in-logo {
+  height: 24px;
+  width: 24px;
+}
+
+#sign-in-text {
+  margin-left: 8px;
+  color: rgb(6, 95, 212);
+  font-weight: 700;
+  font-size: 1.3rem;
 }
 
 #content-container {
@@ -89,11 +153,7 @@ iframe {
   margin-bottom: 10px;
 }
 
-img {
-  float: left;
-  width: 168px;
-  height: 94px;
-}
+
 
 .suggested-videos-title {
   color: rgb(13,13,13);
