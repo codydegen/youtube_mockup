@@ -48,7 +48,7 @@
             </tr>
           </table> -->
           <section id="author-description">
-              <img id="author-image" src="images/author_img.jpg" alt="author of image"></img>
+              <img id="author-image" src="images/author_img.jpg" alt="image of author"></img>
               <div id="author-info">
                   <h4 id="author">Techoist</h4>
                   <h5 id="subscriber-info">20.1k subscribers</h5>
@@ -64,13 +64,32 @@
           <section id="comment-section"> 
               <div id="comment-bar">
                   <h2 id="number-of-comments">77 comments</h2>
-
+                <button id="comment-sort">SORT BY</button>
               </div>
+              <div id="add-comment-container">
+                <img id="profile-img" src="images/profile_img.jpg" alt="profile image">
+                <input id="add-comment" type="text">
+              </div>
+          </section>
+
+          <section id="comment-container">
+            <div class="comment-box">
+              <img class="commenter-image" src="images/commenter_img.jpg" alt="image of commenter"></img>
+              <h5 class="commenter-name"><b>Simon</b> 4 years ago</h5>
+              <p class="comment-content">so cool to watch a video where someone gets straight into it, doesn't waffle on for 1-2 minutes about nothing and explains the process clearly. good job!</p>
+              <div class="comment-response-info">
+                <button class="comment-thumbs-up">Up</button>
+                <h6 class="comment-thumbs-up-count">22</h6>
+                <button class="comment-thumbs-down">Down</button>
+                <h6 class="comment-thumbs-down-count">0</h6>
+                <button class="comment-reply">Reply</button>
+              </div>
+            </div>
           </section>
       </div>
     </div>
   
-    <aside class="suggested-videos-container">
+    <aside id="suggested-videos-container">
       <div class="up-next">
         <h2> up next </h2>
         <h3> autoplay </h3>
@@ -83,13 +102,8 @@
         <h5 class="suggested-videos-views"> 16 million views </h5>
       </div>
 
-      <div class="suggested-videos">
-          <img src="images/test.jpg" alt="thumbnail image for videos"></img>
-          <h4 class="suggested-videos-title">placeholder title</h4>
-          <h5 class="suggested-videos-author"> video author </h5>
-          <h5 class="suggested-videos-views"> 16 million views </h5>
-        </div>
     </aside>
+
   </div>
 </body>
 <script src="myscripts.js"></script>
