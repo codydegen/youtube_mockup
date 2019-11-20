@@ -59,6 +59,14 @@ html {
   background: #f9f9f9;
 }
 
+img {
+  float: left;
+  width: 168px;
+  height: 94px;
+}
+
+/* Header Formatting */
+
 header {
   display: flex;
   position: fixed;
@@ -73,41 +81,81 @@ header {
   background: #fff;
 }
 
-img {
-  float: left;
-  width: 168px;
-  height: 94px;
+#guide-icon {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin-right: 16px;
+}
+
+#YT-logo {
+  width: 129px;
+  height: 24px;
+  padding-right: 49px;
 }
 
 #search-container {
   display: flex;
   align-items: center;
-}
-
-#YT-logo {
-  width: 80px;
-  height: 18px;
-
-}
-
-#guide-icon, #search-icon {
-  width: 24px;
-  height: 24px;
-
+  flex-grow: 2;
 }
 
 #search-bar {
   height: 32px;
+  width: 100%;
+  margin-left: 40px;
+  border-width: 1px;
+  border-color: rgb(211, 211, 211);
+  border-radius: 2px;
+  border-bottom-style: solid;
+  padding-left: 8px;
+  font-size: 1.5em;
 }
 
-#search-bar {
-  height: 32px;
-  width: 240px;
+#search-bar:focus {
+  border-color: rgb(5, 65, 143);
 }
+
+#search-icon {
+  width: 65px;
+  height: 20px;
+  padding: 0 22.5px;
+  background: rgba(0,0,0,0);
+}
+
+#search-button {
+  margin-right: 61px;
+  width: 65px;
+  height: 32px;
+  background: rgb(248, 248, 248);
+  border-color: rgb(211, 211, 211);
+  border-width: 1px;
+  border-radius: 2px;
+  transition: 0.2s;
+  padding: 0;
+}
+
+#search-button:hover {
+  background: rgb(240,240,240);
+}
+
+
+
 
 .header-btn-images {
   height: 24px;
   width: 24px;
+  border-radius: 50%;
+  padding: 0;
+  border: 0;
+}
+
+.header-buttons {
+  height: 40px;
+  width: 40px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 0;
 }
 
 #sign-in-button {
@@ -120,7 +168,7 @@ img {
 
 #sign-in-logo {
   height: 24px;
-  width: 24px;
+  width: 24px; 
 }
 
 #sign-in-text {
@@ -129,6 +177,8 @@ img {
   font-weight: 700;
   font-size: 1.3rem;
 }
+
+/* Main Body */
 
 #content-container {
   display: flex;
@@ -140,6 +190,7 @@ img {
 iframe {
   float: left;
   position: relative;
+  z-index: -1;
 }
 #suggested-videos-container {
   /* float: right; */
