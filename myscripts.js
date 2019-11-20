@@ -8,6 +8,8 @@ showMore.addEventListener('click', () => {
   //s
 });
 
+// add function and event listeners for mousing over thumbs up comments replacing thumbs with darker thumbs
+
 commentPopulate(6);
 suggestedVideosPopulate(5);
 function commentPopulate(reps){

@@ -274,8 +274,8 @@ h1 {
 }
 
 #author-image, #profile-img, .commenter-image {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 16px;
 }
@@ -392,7 +392,7 @@ p {
 }
 
 #add-comment-container {
-  margin-bottom: 62px;
+  margin-bottom: 42px;
 }
 
 #add-comment {
@@ -415,8 +415,61 @@ p {
 }
 
 b {
-  font-weight: 600; /* fix eventually */
+  font-weight: 600;
 }
+
+/*************** Comment Section **************/
+
+.comment-response-info {
+  align-items: center;
+}
+
+.comment-thumbs-img {
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+}
+
+.comment-thumbs {
+  padding: 8px;
+  border-radius:50%;
+  border: 0;
+  transition: 0.5s;
+  background-color: transparent;
+  background-image: url("images/yt_thumbsDown_selected.png");
+}
+
+.comment-thumbs:active {
+  background-color: #9b9b9b;
+}
+
+.comment-thumbs-img:hover {
+  background-image: url("images/yt_thumbsUp_selected.png");
+  filter: invert(34%) sepia(31%) saturate(0%) hue-rotate(161deg) brightness(97%) contrast(84%);
+  /* Color change taken from https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+.comment-thumbs-up-count, .comment-thumbs-down-count {
+  color: #606060;
+  font-size: 1.3em;
+  margin-right: 8px;
+}
+
+.comment-box {
+  margin: 12px 0;
+}
+
+.comment-reply {
+  padding: 8px 16px;
+  border: 0;
+  background-color: transparent;
+  font-size: 1.3em;
+  color: #606060;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/**************** Suggested Videos ************/
 
 #suggested-videos-container {
   /* float: right; */
