@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+/* If width is less than 1024 px do something else */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,6 +53,7 @@ table {
 button, input {
   box-sizing: border-box;
   background: #fff;
+  font-family: Roboto, Arial, sans-serif;
 }
 /* end reset */
 
@@ -178,13 +181,14 @@ header {
   font-size: 1.3rem;
 }
 
-/* Main Body */
+/****************** Main Body *************************/
 
 #content-container {
   display: flex;
   padding-top: 80px;
   width: auto;
   flex-direction: row-reverse;
+  justify-content: center;
 }
 
 iframe {
@@ -197,10 +201,11 @@ iframe {
 
 .video-comments {
   order: 2;
-  flex-grow: 2;
+  width: 560px;
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  margin-right: 40px;
 }
 
 #title-information {
@@ -234,7 +239,7 @@ h5 {
   
 }
 
-.thumbs {
+.meta-buttons {
   height: 36px;
   width: 36px;
   border-radius: 50%;
@@ -242,11 +247,8 @@ h5 {
   padding: 6px;
 }
 
-#share-img, #save-img {
-  
-}
 
-.thumbs:active {
+.meta-buttons:active {
   background-color: rgb(144,144,144);
 }
 
@@ -262,11 +264,13 @@ h1 {
   font-weight: 400;
 }
 
-#video-description {
+
+/******************** Author Info ******************************/
+
+#author-description {
+  margin-top: 10px;
   display: flex;
-  flex-direction: row;
-  border-bottom: thin solid rgb(202, 202, 202);
-  border-width: 1px;
+  align-items: center;
 }
 
 #author-image, #profile-img, .commenter-image {
@@ -277,11 +281,84 @@ h1 {
 }
 #author-info {
   flex-grow: 2;
-}
-#subscribe {
-  width: 113.5px;
+  
 }
 
+#author {
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+#subscribe {
+  color: #fff;
+  background: #cc0000;
+  width: 105.5px;
+  height: 37px;
+  border: 0;
+  border-radius: 2px;
+  border-color: #cc0000;
+  box-shadow: none;
+  font-weight: 550;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+  
+/************** Video Description *************************/
+
+#video-description {
+  display: flex;
+  flex-direction: column;
+  border-bottom: thin solid rgb(202, 202, 202);
+  border-width: 1px;
+  margin-left: 64px;
+  padding-bottom: 16px;
+
+}
+
+p {
+  font-size: 1.4em;
+  line-height: 2.1rem;
+}
+
+#description-expand {
+  border: 0;
+  background-color: transparent;
+  color: rgba(17,17,17,0.6);
+  font-size: 1.3em;
+  font-weight: 600;
+  width: 100px;
+  text-align: left;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.video-description-properties-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.video-description-properties {
+  width: 110px;
+}
+
+.vid-link {
+  color: #065fd4;
+  font-size: 1.4em;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.vid-link:visited {
+  color: #0d0d0d;
+}
+
+/************************ Comments ******************************/
 .comment-response-info,
 .add-comment-container,
 #comment-bar {

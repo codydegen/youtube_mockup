@@ -1,4 +1,13 @@
 //alert("hello");
+const showMore = document.getElementById("description-expand");
+showMore.addEventListener('click', () => {
+  // expand text
+  const hiddenText = document.getElementById("video-description-hidden");
+  hiddenText.classList.toggle('hidden');
+  showMore.innerText = hiddenText.classList.contains('hidden') ? 'SHOW MORE' : 'SHOW LESS'; 
+  //s
+});
+
 commentPopulate(6);
 suggestedVideosPopulate(5);
 function commentPopulate(reps){
