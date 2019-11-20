@@ -311,7 +311,7 @@ h1 {
   flex-direction: column;
   border-bottom: thin solid rgb(202, 202, 202);
   border-width: 1px;
-  margin-left: 64px;
+  padding-left: 64px;
   padding-bottom: 16px;
 
 }
@@ -359,6 +359,53 @@ p {
 }
 
 /************************ Comments ******************************/
+
+#comment-bar {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+#comment-sort {
+  vertical-align: middle;
+
+  line-height: 26px;
+}
+
+#number-of-comments {
+  font-size: 1.6em;
+  color: #0d0d0d;
+  margin-right: 32px;
+}
+
+#sort-by-icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+}
+
+#comment-sort {
+  border: 0;
+  background-color: transparent;
+  font-weight: 600;
+  color: #606060;
+  
+}
+
+#add-comment-container {
+  margin-bottom: 62px;
+}
+
+#add-comment {
+  background-color: transparent;
+  width: 496px;
+  padding-bottom: 4px;
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0,0,0,.1);
+  color: #606060;
+  font-size: 1.4em;
+}
+
 .comment-response-info,
 .add-comment-container,
 #comment-bar {
