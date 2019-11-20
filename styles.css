@@ -79,6 +79,7 @@ header {
   /* border-width: 2px;
   border-style: solid; */
   background: #fff;
+  z-index: 1;
 }
 
 #guide-icon {
@@ -113,7 +114,9 @@ header {
 }
 
 #search-bar:focus {
-  border-color: rgb(5, 65, 143);
+  outline: 0;
+  border-color: rgb(7, 82, 179);
+  box-shadow: inset 0 0 1.5px gray;
 }
 
 #search-icon {
@@ -138,9 +141,6 @@ header {
 #search-button:hover {
   background: rgb(240,240,240);
 }
-
-
-
 
 .header-btn-images {
   height: 24px;
@@ -190,34 +190,10 @@ header {
 iframe {
   float: left;
   position: relative;
-  z-index: -1;
-}
-#suggested-videos-container {
-  /* float: right; */
-  order: -1;
-  width: 400px;
-}
-.suggested-videos {
-  border-width: 2px;
-  border-style: solid;
-  height: 94px;
-  margin-bottom: 10px;
+  z-index: 0;
 }
 
-
-
-.suggested-videos-title {
-  color: rgb(13,13,13);
-  font-size: 1.4em;
-  font-weight: 700;
-
-}
-
-.suggested-videos-author,
-.suggested-videos-views {
-  color: rgb(13,13,13);
-  font-size: 1.3em;
-}
+/* Meta data info */
 
 .video-comments {
   order: 2;
@@ -230,12 +206,55 @@ iframe {
 #title-information {
   border-bottom: thin solid rgb(202, 202, 202);
   border-width: 1px;
+  width: 560px;
+}
+
+#video-title {
+  padding-top: 12px;
+  padding-bottom: 8px;
 }
 
 .bottom-bar-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+h5 {
+  font-size: 1.4em;
+  color: #606060;
+}
+.video-reaction-button {
+  display: flex;
+  align-items: center;
+  border-width: 0;
+  background-color: transparent;
+  
+}
+
+.thumbs {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  transition: 0.4s;
+  padding: 6px;
+}
+
+#share-img, #save-img {
+  
+}
+
+.thumbs:active {
+  background-color: rgb(144,144,144);
+}
+
+.response {
+  color: #606060;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 h1 {
@@ -246,7 +265,6 @@ h1 {
 #video-description {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   border-bottom: thin solid rgb(202, 202, 202);
   border-width: 1px;
 }
@@ -273,5 +291,32 @@ h1 {
 }
 
 b {
-  font-weight: 800; /* fix eventually */
+  font-weight: 600; /* fix eventually */
+}
+
+#suggested-videos-container {
+  /* float: right; */
+  order: -1;
+  width: 400px;
+}
+.suggested-videos {
+  border-width: 2px;
+  border-style: solid;
+  height: 94px;
+  margin-bottom: 10px;
+}
+
+
+
+.suggested-videos-title {
+  color: rgb(13,13,13);
+  font-size: 1.4em;
+  font-weight: 700;
+
+}
+
+.suggested-videos-author,
+.suggested-videos-views {
+  color: rgb(13,13,13);
+  font-size: 1.3em;
 }

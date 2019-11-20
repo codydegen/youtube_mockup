@@ -27,17 +27,29 @@
   <div id="content-container">
     <div class="video-comments">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/ZnuwB35GYMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div id="title-information">
-          <div>
+      <div>
+          <div id="title-information">
               <h1 id="video-title">How To Embed A YouTube Video</h1>
               <div class="bottom-bar-info">
-                  <h5>236,000 views</h5>
-                  <h5>March 15, 2013</h5>
-                  <h6>likes</h6>
-                  <h6>dislikes</h6>
-                  <h6>share</h6>
-                  <h6>save</h6>
-                  <h6>other</h6>
+                  <h5>236,000 views • March 15, 2013</h5>
+                  <!-- <h5></h5> -->
+                <button id="like-button" class="video-reaction-button">
+                  <img class="thumbs" src="images/yt_thumbsUp.png" alt="I like this">
+                  <h6 id="likes" class="response">26</h6>
+                </button>
+                <button id="dislike-button" class="video-reaction-button">
+                  <img class="thumbs" src="images/yt_thumbsDown.png" alt="I dislike this">
+                  <h6 id="dislikes" class="response">44</h6>
+                </button>
+                <button id="share-button" class="video-reaction-button">
+                  <img class="thumbs" id="share-img" src="images/share_arrow.png" alt="Share Video">
+                  <h6 class="response">Share</h6>
+                </button>
+                <button id="save-button" class="video-reaction-button">
+                  <img class="thumbs" id="save-img" src="images/save_icon.png" alt="Save Video">
+                  <h6 class="response">save</h6>
+                </button>
+                <img id="other" class="thumbs" src="images/ellipsis-h.png" alt="Other">
               </div>
           </div>
           <!-- <table id="bottom-bar">
