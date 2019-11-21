@@ -8,10 +8,15 @@ showMore.addEventListener('click', () => {
   //s
 });
 
+const slider = document.getElementById("slider-background");
+const sliderKnob = document.getElementById("slider-knob");
+slider.addEventListener('click', autoplayToggle);
+sliderKnob.addEventListener('click', autoplayToggle);
+
 // add function and event listeners for mousing over thumbs up comments replacing thumbs with darker thumbs
 
 commentPopulate(6);
-suggestedVideosPopulate(5);
+suggestedVideosPopulate(12);
 function commentPopulate(reps){
   for (let i = 1; i < reps; i++){
     const commentContainer = document.getElementById("comment-container");
@@ -41,19 +46,28 @@ function commentPopulate(reps){
     node.appendChild(commentResponse);
 
     let upBtn = document.createElement('button');
-    upBtn.setAttribute('class','comment-thumbs-up');
-    upBtn.innerText = 'Up';
+    upBtn.setAttribute('class','comment-thumbs');
+    let upBtnIcon = document.createElement('img');
+    upBtnIcon.setAttribute('class', 'comment-thumbs-img');
+    upBtnIcon.setAttribute('src', 'images/yt_thumbsUp.png');
+    upBtnIcon.setAttribute('alt', 'I like this comment');
+    upBtn.appendChild(upBtnIcon);
+    //upBtn.innerText = 'Up';
     let upBtnNum = document.createElement('h6');
     upBtnNum.setAttribute('class', 'comment-thumbs-up-count');
     upBtnNum.innerText = '22';
     commentResponse.appendChild(upBtn);
     commentResponse.appendChild(upBtnNum);
     let downBtn = document.createElement('button');
-    downBtn.setAttribute('class','comment-thumbs-down');
-    downBtn.innerText = 'Down';
+    downBtn.setAttribute('class','comment-thumbs');
+    let downBtnIcon = document.createElement('img');
+    downBtnIcon.setAttribute('class', 'comment-thumbs-img');
+    downBtnIcon.setAttribute('src', 'images/yt_thumbsDown.png');
+    downBtnIcon.setAttribute('alt', 'I like this comment');
+    downBtn.appendChild(downBtnIcon);
     let downBtnNum = document.createElement('h6');
     downBtnNum.setAttribute('class', 'comment-thumbs-down-count');
-    downBtnNum.innerText = '22';
+    downBtnNum.innerText = '0';
     commentResponse.appendChild(downBtn);
     commentResponse.appendChild(downBtnNum);
     let replyBtn = document.createElement('button');
@@ -79,7 +93,7 @@ function suggestedVideosPopulate(reps){
     //add video name
     let name = document.createElement('h4');
     name.setAttribute('class', 'suggested-videos-title');
-    name.innerText = 'placeholder title';
+    name.innerText = 'Placeholder Title';
     node.appendChild(name);
     // //add author
     let author = document.createElement('h5');
@@ -92,5 +106,19 @@ function suggestedVideosPopulate(reps){
     views.textContent = '16M Views';
     node.appendChild(views);
     
+  }
+}
+
+function autoplayToggle() {
+  console.log("yo");
+  const knob = document.getElementById("slider-knob");
+  const knobStatus = knob.classList.contains("on");
+  knob.classList.toggle('on');
+  if(knobStatus) {
+    knob.style.backgroundColor = '#065fd4';
+    knob.style.marginLeft = '26px';
+  } else {
+    knob.style.backgroundColor = '#7e7e7e';
+    knob.style.marginLeft = '0';
   }
 }

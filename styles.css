@@ -102,6 +102,8 @@ header {
   display: flex;
   align-items: center;
   flex-grow: 2;
+  justify-content: center;
+  /* max-width: 630px; */
 }
 
 #search-bar {
@@ -114,6 +116,7 @@ header {
   border-bottom-style: solid;
   padding-left: 8px;
   font-size: 1.5em;
+  max-width: 565px;
 }
 
 #search-bar:focus {
@@ -151,6 +154,7 @@ header {
   border-radius: 50%;
   padding: 0;
   border: 0;
+  transition: 0.4s;
 }
 
 .header-buttons {
@@ -159,6 +163,12 @@ header {
   margin-right: 8px;
   border-radius: 50%;
   border: 0;
+  transition: 0.4s;
+
+}
+
+.header-buttons:active {
+  background-color: rgb(144,144,144);
 }
 
 #sign-in-button {
@@ -471,19 +481,38 @@ b {
 
 /**************** Suggested Videos ************/
 
+.up-next {
+  display: flex;
+  width: 400px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+#up-next-text {
+  font-size: 1.6em;
+  color: #0d0d0d;
+  margin-right: 32px;
+  width: 265px;
+}
+
 #suggested-videos-container {
   /* float: right; */
   order: -1;
   width: 400px;
 }
+
 .suggested-videos {
-  border-width: 2px;
+  border-width: 0;
   border-style: solid;
   height: 94px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  box-sizing: border-box;
 }
 
-
+.suggested-videos>img {
+  margin-right: 8px;
+}
 
 .suggested-videos-title {
   color: rgb(13,13,13);
@@ -496,4 +525,38 @@ b {
 .suggested-videos-views {
   color: rgb(13,13,13);
   font-size: 1.3em;
+}
+
+.sug-video-1 {
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0,0,0,.1);
+  padding-bottom: 16px;
+  height: 110px;
+}
+h3.response {
+  margin-right: 6px;
+}
+/***************** Slider ********************/
+
+
+#slider-background {
+  width: 36px;
+  height: 14px;
+  background-color: rgb(194, 194, 194);
+  border-radius: 7px;
+  margin: 1px 4px;
+  position: absolute;
+  top: 86px;
+}
+
+#slider-knob {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #7e7e7e;
+  /* z-index: 1; */
+  position: absolute;
+  top: 84px;
+  transition: 0.25s;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.6);
 }
