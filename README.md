@@ -1,5 +1,5 @@
 # YouTube Mockup
-A quick mockup of a YouTube watch page to test my skills with embedding media and formatting with HTML and CSS.  The up-to-date version of this mockup can be found [here](https://codydegen.github.io/youtube_mockup/)
+A quick mockup of a YouTube watch page to test my skills with embedding media and formatting with HTML and CSS.  The up-to-date version of this mockup can be found [here.](https://codydegen.github.io/youtube_mockup/)
 
 # Remaining Issues
 I won't come back to this for a bit but if I did, here are the things I'd like to improve:

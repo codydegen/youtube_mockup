@@ -1,15 +1,17 @@
 //alert("hello");
-const showMore = document.getElementById("description-expand");
+const showMore = document.getElementById('description-expand');
 showMore.addEventListener('click', () => {
   // expand text
-  const hiddenText = document.getElementById("video-description-hidden");
+  const hiddenText = document.getElementById('video-description-hidden');
   hiddenText.classList.toggle('hidden');
-  showMore.innerText = hiddenText.classList.contains('hidden') ? 'SHOW MORE' : 'SHOW LESS'; 
+  showMore.innerText = hiddenText.classList.contains('hidden')
+    ? 'SHOW MORE'
+    : 'SHOW LESS';
   //s
 });
 
-const slider = document.getElementById("slider-background");
-const sliderKnob = document.getElementById("slider-knob");
+const slider = document.getElementById('slider-background');
+const sliderKnob = document.getElementById('slider-knob');
 slider.addEventListener('click', autoplayToggle);
 sliderKnob.addEventListener('click', autoplayToggle);
 
@@ -17,10 +19,10 @@ sliderKnob.addEventListener('click', autoplayToggle);
 
 commentPopulate(6);
 suggestedVideosPopulate(12);
-function commentPopulate(reps){
-  for (let i = 1; i < reps; i++){
-    const commentContainer = document.getElementById("comment-container");
-    let node = document.createElement('div')
+function commentPopulate(reps) {
+  for (let i = 1; i < reps; i++) {
+    const commentContainer = document.getElementById('comment-container');
+    let node = document.createElement('div');
     node.setAttribute('class', 'comment-box');
     commentContainer.appendChild(node);
 
@@ -38,7 +40,8 @@ function commentPopulate(reps){
     //add comment content
     let content = document.createElement('p');
     content.setAttribute('class', 'comment-content');
-    content.textContent = 'so cool to watch a video where someone gets straight into it, doesn\'t waffle on for 1-2 minutes about nothing and explains the process clearly. good job!';
+    content.textContent =
+      "so cool to watch a video where someone gets straight into it, doesn't waffle on for 1-2 minutes about nothing and explains the process clearly. good job!";
     node.appendChild(content);
     //add comment response info
     let commentResponse = document.createElement('div');
@@ -46,7 +49,7 @@ function commentPopulate(reps){
     node.appendChild(commentResponse);
 
     let upBtn = document.createElement('button');
-    upBtn.setAttribute('class','comment-thumbs');
+    upBtn.setAttribute('class', 'comment-thumbs');
     let upBtnIcon = document.createElement('img');
     upBtnIcon.setAttribute('class', 'comment-thumbs-img');
     upBtnIcon.setAttribute('src', 'images/yt_thumbsUp.png');
@@ -59,7 +62,7 @@ function commentPopulate(reps){
     commentResponse.appendChild(upBtn);
     commentResponse.appendChild(upBtnNum);
     let downBtn = document.createElement('button');
-    downBtn.setAttribute('class','comment-thumbs');
+    downBtn.setAttribute('class', 'comment-thumbs');
     let downBtnIcon = document.createElement('img');
     downBtnIcon.setAttribute('class', 'comment-thumbs-img');
     downBtnIcon.setAttribute('src', 'images/yt_thumbsDown.png');
@@ -77,10 +80,12 @@ function commentPopulate(reps){
   }
 }
 
-function suggestedVideosPopulate(reps){
-  for (let i = 1; i < reps; i++){
-    const videoContainer = document.getElementById("suggested-videos-container");
-    let node = document.createElement('div')
+function suggestedVideosPopulate(reps) {
+  for (let i = 1; i < reps; i++) {
+    const videoContainer = document.getElementById(
+      'suggested-videos-container'
+    );
+    let node = document.createElement('div');
     node.setAttribute('class', 'suggested-videos');
     videoContainer.appendChild(node);
 
@@ -105,16 +110,14 @@ function suggestedVideosPopulate(reps){
     views.setAttribute('class', 'suggested-videos-views');
     views.textContent = '16M Views';
     node.appendChild(views);
-    
   }
 }
 
 function autoplayToggle() {
-  console.log("yo");
-  const knob = document.getElementById("slider-knob");
-  const knobStatus = knob.classList.contains("on");
+  const knob = document.getElementById('slider-knob');
+  const knobStatus = knob.classList.contains('on');
   knob.classList.toggle('on');
-  if(knobStatus) {
+  if (knobStatus) {
     knob.style.backgroundColor = '#065fd4';
     knob.style.marginLeft = '26px';
   } else {
